@@ -1,0 +1,55 @@
+.marcacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: auto;
+}
+
+.numPessoas {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+label {
+  font-size: 1.5em;
+}
+.detalhes {
+  border: 1px solid black;
+}
+.numPessoas input {
+  width: 10%;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.paletaCores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.paletaCores input {
+  margin: 0.5rem;
+}
+
+.decoracao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 1rem;
+}
+
+.outros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}

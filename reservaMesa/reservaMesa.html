@@ -1,0 +1,71 @@
+        <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservar Mesa</title>
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <link rel="stylesheet" href="reservaMesa.css" />
+    <link rel="stylesheet" href="../assets/css/btn.css" />
+    <script src="reservaMesa.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img onclick="history.back()" style="height: 100px; cursor: pointer;" src="../assets/backButton.png" alt="">
+        <a href="#" class="nav-logo"><img src="../assets/DElOGO.PNG" alt="" style="right: 80px;position: relative;"></a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    </header>
+
+    <div class="container">
+      <h1>Reserva Mesa</h1>
+        <div class="marcacao">
+          <div class="dia">
+            <label for="fdate">Dia:</label>
+            <input type="date" id="fdate" name="fdate" />
+          </div>
+          <div class="hora">
+            <label for="fhour">Hora:</label>
+            <input type="time" id="fhour" name="fhour" />
+          </div>
+        </div>
+        <div class="numPessoas">
+          <label for="fquantity">Número de pessoas (mínimo 1 pessoa):</label>
+          <input type="number" id="fquantity" name="fquantity" min="1" value="1" />
+        </div>
+        <button onclick="go()" class="button-64" id="btnNextPage" role="button"><span class="text">Próximo</span></button>
+     
+    </div>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+  </script>
+</html>

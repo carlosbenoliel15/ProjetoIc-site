@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <link rel="stylesheet" href="pagamento.css" />
+    <script src="pagamento.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img onclick="history.back()" style="height: 100px; cursor: pointer;" src="../assets/backButton.png" alt="">
+        <a href="#" class="nav-logo"><img src="../assets/DElOGO.PNG" alt="" style="right: 80px;position: relative;"></a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    </header>
+    <div class="container">
+      <ul class="pedidos">
+        <li>
+          <div class="pedido">
+            <h2>Total do pedido</h2>
+            <div class="line"></div>
+            <h2 id="totalPedido">€</h2>
+          </div>
+        </li>
+        <li>
+          <div class="pedido">
+            <h2>Gorjeta</h2>
+            <div class="line"></div>
+            <label for=""></label>
+              <input
+                type="checkbox"
+                name="JTP"
+                id="summer"
+                value="summer"
+                onclick="checkTip()"
+              />
+              <label for="gorjeta">Adicionar gorjeta</label>
+              <input type="number" id="gorjeta" name="gorjeta" min="1" />€
+          </div>
+        </li>
+        <li>
+          <div class="pedido">
+            <h2>Total</h2>
+            <div class="line"></div>
+            <h2 id="total"></h2>
+          </div>
+        </li>
+      </ul>
+
+      <button onclick="saveTotal()" type="button" href="../pagar/pagar.html">Paga aqui!</button>
+
+    </div>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+  </script>
+</html>

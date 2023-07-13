@@ -1,0 +1,32 @@
+.card1{
+  margin-top: 13rem;
+}
+#cardMb {
+ 
+  
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin:top;
+  text-align: center;
+  font-family: arial;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+label {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+
+#mbwaybtn{
+  margin-top:10px;
+  margin-bottom:30px;
+}

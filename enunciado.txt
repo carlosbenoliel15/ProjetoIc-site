@@ -1,0 +1,44 @@
+Enunciado
+Introdução
+O vosso grupo foi convidado a participar num concurso que visa conceber aplicações com características inovadoras, pela criatividade e boa usabilidade dos sistemas interativos que realiza. As duas dimensões mais relevantes para o júri do concurso são as possibilidades de interação oferecidas, e as funcionalidades que podem ser realizadas. Assim, ao nível da interação espera-se que as aplicações ofereçam possibilidades de apresentação dos seus conteúdos que vão para além do tradicional texto. Outras possibilidades sugeridas incluem a utilização de imagens, vídeos e sons. A originalidade e a adequação à população alvo, que deve ser convenientemente descrita, são fortemente cotadas na apreciação deste item. Ao nível das funcionalidades, espera-se que as soluções apresentadas ofereçam diversidade ao utilizador. A usabilidade e a experiência de utilização (user experience) são aspetos fundamentais. Em particular, a navegação dentro da aplicação deve ser cuidada, não deverá ser limitada a um nível, e deve facilitar a orientação do utilizador, evitando que este cometa erros. Estes aspectos são levados em consideração pelo júri.
+
+O resultado do vosso trabalho será a interface para a aplicação para apresentar ao júri do concurso e potenciais clientes. A especificação apresentada fornece apenas linhas de orientação sobre o tipo de serviço e funcionalidades a disponibilizar. Os grupos deverão refinar e completar a especificação original, mantendo a ideia central, e sendo fortemente incentivados a inovar ao nível das soluções que propõem para estes serviços.
+
+NOTA: NÃO SE ESPERA a concretização das aplicações, com todos os conteúdos, funcionalidades e bases de dados, mas apenas da interface que lhes dá acesso e dos mecanismos necessários para a sua demonstração e avaliação. ISTO NÃO SIGNIFICA NO ENTANTO QUE A APLICAÇÃO APENAS FUNCIONE PARA UM CASO EM PARTICULAR.
+
+DigitalEmployee
+Enunciado:
+A cadeia de fast-food SustainableFoody quer revolucionar o mercado da restauração através da combinação da sua comida para alambazar com uma vertente saudável e sustentável. Para tal, pretendem desenvolver a aplicação DigitalEmployee que permite consultar o menu do(s) seus restaurante(s) com principal foco na origem dos alimentos apresentados, informação nutricional, bem como a identificação dos produtos que contenham potenciais alérgenos. Permitirá ainda encomendar a sua refeição (e a dos amigos), pedir os cafés (um deles cheio e com cheirinho), ou mesmo oferecer uma sobremesa à pessoa da mesa do lado que quer deixar bem impressionada.
+
+Com este trabalho, pretende-se criar uma solução que permita aos utilizadores aceder às várias funcionalidades da aplicação DigitalEmployee, desde consultar o menu existente, fazer o seu pedido (ou repetir pedidos habituais), reservar senhas para a casa de banho do restaurante, pagar a sua refeição, entre outras.
+
+A combinação das funcionalidades suportadas deverá permitir aos utilizadores realizarem várias tarefas, de entre as quais enumeramos estas três:
+
+Consulta do menu interativo em que é possível verificar a origem dos produtos, informação nutricional de cada alimento/bebida e alérgenos, bem como efectuar pedidos e verificar o seu estado;
+Consulta de informações das visitas anteriores ao restaurante (como por exemplo, consultar os pedidos efetuados, consultar e transferir facturas);
+Reservar uma mesa (para si ou para um grupo), podendo fazer o pedido antecipadamente, e realizar o pagamento da refeição, de forma individual, ou de forma combinada entre as várias pessoas da mesa.
+O protótipo de cada grupo deve suportar (pelo menos) três tarefas, sendo uma delas a tarefa 1, outra uma das 2 tarefas restantes (à escolha), e a terceira a identificar através da realização da Análise de Utilizadores e Tarefas (levantamento de requisitos). Sejam criativos, pensem em cenários inovadores.
+
+Esclarecimentos:
+A aplicação deverá ser concebida para funcionar em ecrãs com uma resolução de 1280x720px, na horizontal, de modo a poder ser usada em computadores e tablets.
+Não é preciso terem as funcionalidades de registo e login. Assumam que um determinado utilizador já está logged. Caso pretendam ter vários utilizadores, podem colocar botões fora da interface para simular a mudança de utilizador.
+A aplicação deve manter estado durante uma utilização, isto é, se eu por exemplo escolher um prato e uma bebida, quando for pagar o recibo/fatura deve conter esse prato e bebida. Podem usar Session Storage, ou estruturas de dados em memória para guardar essa informação.
+Não é preciso criar nenhuma base de dados para guardar os dados de forma permanente. Podem ter os dados “pré-carregados” no código.
+Cenário de Tarefa
+(Cenário de tarefa para a tarefa 1)
+
+Este ano, decidiu festejar o seu aniversário com o seu grupo de amigos no restaurante mais trendy dos últimos meses, o SustainableFoody. Para além de si, alguns dos seus amigos têm também intolerância ao glúten e lactose, bem como alergias a amendoins e marisco, pelo que é particularmente importante garantir que a sua refeição é adequada para todos e não acabem a noite no hospital. Adicionalmente, ao longo dos últimos anos tem vindo a desenvolver uma consciência mais sustentável e tenta consumir, sempre que possível, produtos de origem portuguesa e biológicos. Através da aplicação DigitalEmployee, escolha o primeiro prato sem glúten, um sumo natural de laranja do Algarve, e a terceira sobremesa sem glúten nem lactose, conclua de seguida o seu pedido. Verifique ainda o tempo previsto para o seu pedido ficar pronto.
+
+Critérios Usados na Avaliação:
+Desenho de Ecrãs (7.5)
+Layout dos ecrãs (3)
+Texto e Cores (1.5 + 1.5)
+Ícones e Imagens (1.5)
+Funcionalidades e Usabilidade (11.5)
+3 Tarefas + Extras (3.75)
+Integração + Conteúdo + Manter estado (3.5)
+Cumprimento das Heurísticas (4.25)
+Relatório Requisitos + Portfólio (1)
+ Estes e outros componentes essenciais para a realização do projeto serão classificados, não só na avaliação final, mas também através da avaliação das aulas TP (2 valores) e PL (2 valores).
+
+Last modified: Thursday, 22 September 2022, 2:42 PM

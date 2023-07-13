@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/play.css" />
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <script src="digitalEmployee.js" defer></script>
+    <script src="escolherRestaurante.js"></script>
+<head>
+	<style>
+	#map {
+		
+		height: 600px;
+		width: 75%;
+		display:flex;
+		position: relative;
+		top:20px;
+		overflow: visible;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		
+	}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<nav class="navbar" >
+		  <img
+			onclick="history.back()"
+			style="height: 100px; cursor: pointer"
+			src="../assets/backButton.png"
+			alt=""
+		  />
+		  <a href="#" class="nav-logo"
+			><img
+			  src="../assets/DElOGO.PNG"
+			  alt=""
+			  style="right: 80px; position: relative"
+		  /></a>
+		  <ul class="nav-menu">
+			<li class="nav-item">
+			  <a href="#" class="nav-link">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a href="#" class="nav-link">Menu</a>
+			</li>
+			<li class="nav-item">
+			  <a href="#" class="nav-link">About</a>
+			</li>
+			<li class="nav-item">
+			  <a href="#" class="nav-link">Contact</a>
+			</li>
+			<li class="nav-item">
+			  <a href="../finalizarPedido/finalizarPedido.html" class="nav-link"
+				>Pagar</a
+			  >
+			</li>
+		  </ul>
+		  <div class="hamburger">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		  </div>
+		</nav>
+	  </header>
+	<section style="display:flex;justify-content:center;align-items:center;
+	margin-top:10%;flex-direction: column;">
+	<h1>Escolha o Restaurante que pretende fazer o pedido</h1>
+	<div id="map"></div>
+	</section>
+	<script>
+	function initMap() {
+		var uluru = {lat: 38.736946, lng: 	-9.142685};
+		var faro={lat:37.008666632,log: -7.959496162};
+		var porto={lat:41.161758, log:-8.583933};
+		var braga={lat:40.757318821220274,log:-8.054115772247314};
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 7,
+		center: uluru,
+		backgroundColor:"#add8e6"
+		});
+
+		new google.maps.Marker({
+		position: uluru,
+		map: map
+		});
+		new google.maps.Marker({
+		position: faro,
+		map: map
+		});
+		
+		new google.maps.Marker({
+		position: porto,
+		map: map
+		});
+		new google.maps.Marker({
+		position: braga,
+		map: map
+		});
+		
+	}
+	</script>
+	<script async defer
+	src=
+"https://maps.googleapis.com/maps/api/js?key=AIzaSyCe9tOHf--Ped10K7_uEdeP98wf6-xzhZk&callback=initMap">
+	</script>
+	 <script>
+		const hamburger = document.querySelector(".hamburger");
+		const navMenu = document.querySelector(".nav-menu");
+		
+	
+		//Get all radio's and check which one is checked
+	
+		hamburger.addEventListener("click", mobileMenu);
+	
+		function mobileMenu() {
+			hamburger.classList.toggle("active");
+			navMenu.classList.toggle("active");
+		}
+	</script>
+</body>
+</html>

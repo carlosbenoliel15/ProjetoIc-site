@@ -1,0 +1,25 @@
+.marcacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+.numPessoas {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    padding: 2rem;
+}
+
+.numPessoas input{
+    width: 10%;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+

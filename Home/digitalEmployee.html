@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Employee</title>
+    <link rel="stylesheet" href="digitalEmployee.css" />
+    <link rel="stylesheet" href="play.css" />
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="carrousel.css" />
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <script src="digitalEmployee.js" defer></script>
+
+
+</head>
+
+<body style="display: flexs;flex-wrap:wrap">
+    <header class="header" >
+        <nav class="navbar" style="z-index:5;">
+            <img onclick="history.back()" style="height: 100px; cursor: pointer;" src="../assets/backButton.png" alt="">
+            <a href="#" class="nav-logo"><img src="../assets/DElOGO.PNG" alt="" style="right: 80px;position: relative;"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!--Same Carrousel but with text centered on top of the image:-->
+    <section id="slider">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+        <!-- o onClick tmb tá a ser ativado quando tás só a dar scroll é preciso arranjar isso-->
+        <label for="s1" id="slide1"><img  id="openAperitivos" onclick="openAskProducts(0)" src="https://images-gmi-pmc.edge-generalmills.com/6d2dddb6-4201-4044-a740-0cbb6b126687.jpg" alt=""><span style="z-index: 0;">Aperitivos</span></label>
+        <label for="s2" id="slide2"><img id="openSoupas"  onclick="openAskProducts(1)" src="https://assets3.cbsnewsstatic.com/hub/i/r/2015/10/05/eecc00d9-d426-4fa1-a23b-7a471336a7ba/thumbnail/1200x630/b537995ae8e01075795ab4b468a149c2/pumpkinsoup_thinkstockphotos-489003988.jpg" alt="Soupa"><span style="z-index: 0;">Soupa</span></label>
+        <label for="s3" id="slide3"><img  id="openPratos"  onclick="openAskProducts(2)"  src="https://res.cloudinary.com/tf-lab/image/upload/w_600,h_337,c_fill,q_auto,f_auto/restaurant/ab65e90e-1804-4ca9-b564-9367dfe01ffb/a3a015e4-aaeb-472a-9c71-a8319992e98b.jpg" alt="Prato"><span style="z-index: 0;">Prato</span></label>
+        <label for="s4" id="slide4"><img id="openSobremesas"  onclick="openAskProducts(3)" src="https://static01.nyt.com/images/2022/01/13/dining/13pour1/13pour1-videoSixteenByNine3000.jpg" alt="Bebidas"><span style="z-index: 0;">Bebidas</span></label>
+        <label for="s5" id="slide5"><img id="openBebidas" onclick="openAskProducts(4)" src="https://img.delicious.com.au/YmNbVBfK/w1200/del/2020/08/pecan-chocolate-bread-and-butter-pudding-137408-2.jpg" alt="Sobremesas"><span style="z-index: 0;">Sobremesas</span></label>
+    </section>
+
+</body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+
+    //Get all radio's and check which one is checked
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    //o onClick tmb tá a ser ativado quando tás só a dar scroll é preciso arranjar isso 
+    /*openAperitivos.onclick = function() {
+        window.location.href = "askProducts.html?category=0";
+    }
+    openSoupas.onclick = function() {
+        window.location.href = "askProducts.html?category=1";
+    }
+    openPratos.onclick = function() {
+        window.location.href = "askProducts.html?category=2";
+    }
+    openSobremesas.onclick = function() {
+        window.location.href = "askProducts.html?category=3";
+    }
+    openBebidas.onclick = function() {
+        window.location.href = "askProducts.html?category=4";
+    }*/
+
+
+</script>
+
+</html>

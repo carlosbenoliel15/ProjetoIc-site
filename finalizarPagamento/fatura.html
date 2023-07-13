@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <link rel="stylesheet" href="fatura.css" />
+    <script src="fatura.js"></script>
+   
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img onclick="history.back()" style="height: 100px; cursor: pointer;" src="../assets/backButton.png" alt="">
+        <a href="#" class="nav-logo"><img src="../assets/DElOGO.PNG" alt="" style="right: 80px;position: relative;"></a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+  <table class="body-wrap">
+    <tbody><tr>
+        <td></td>
+        <td class="container" width="600">
+            <div class="content">
+                <table class="main" width="100%" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                        <td class="content-wrap aligncenter">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tbody><tr>
+                                    <td class="content-block">
+                                        <h1>Obrigado por nos ter escolhido!!</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <table class="invoice">
+                                            <tbody><tr>
+                                                <td class="content-block" ><h2 style="margin-left:30%;margin-bottom:10px;">Pedido:#8</h2></td>
+                                            </tr>
+                                            <tbody><tr>
+                                                <td>Fevereiro 31 2023<br>Tempo Estimado de espera:30minutos</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        <tbody id="tabelaFatura">
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                                <tr id="morada">
+
+                                </tr>
+                                <tr>
+                                    <td class="content-block">
+                                        <a href="#">Faça Download</a>
+                                    </td>
+                                </tr>
+                                
+                            </tbody></table>
+                        </td>
+                    </tr>
+                </tbody></table>
+               </div>
+        </td>
+        <td></td>
+    </tr>
+</tbody></table>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+  </script>
+</html>

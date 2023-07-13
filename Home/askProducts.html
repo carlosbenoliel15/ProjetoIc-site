@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Employee</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- css's -->
+    <link rel="stylesheet" href="photoContainer.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/searchbar.css">
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <link rel="stylesheet" href="../assets/css/btn.css">
+    <script src="askProducts.js" defer>
+    </script>
+    <script src="../finalizarPedido/finalizarPedido.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <img onclick="history.back()" style="height: 100px; cursor: pointer; z-index: 7;" src="../assets/backButton.png" alt="">
+
+            <a href="digitalEmployee.html" class="nav-logo"><img src="../assets/DElOGO.PNG" alt=""></a>
+            <ul class="nav-menu" style="list-style: none;">
+                <li class="nav-item" >
+
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+<div class="secondBar" style="position: absolute;top:15%;width:100%;height:50px;" >
+    
+    <div class="wrap" style="position:relative;" >
+        <div class="search">
+            <input oninput="FilterProducts(this.value)" id="searchBar" type="text" class="searchTerm" placeholder="O que estás á procura?">
+            <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>  <!--Por aqui o search icon:-->
+        </button>
+            <button type="submit" id="filterButton" class="searchButton whitelist" onclick="showFilter()"><i style="color:white" class="fa fa-filter"></i></button>
+        </div>
+        <button type="submit"  id="pedidoButton" class="searchButton2 whitelist" style="position: relative;left:25%" onclick="showPedido()">
+            <span class="text">O Seu Pedido</span> 
+        </button>
+
+    </div>
+    
+    <button class="button-64" id="btnNextPage" role="button" style="position:relative;top:15%;left:5%;"><span class="text">Próximo</span></button>
+   
+</div>
+  <div class="dropDown-container" style="display:flex ;position:absolute;margin-top:9%;height: auto; width:100%; z-index: 4;">
+    <div class="nav-menu1 whitelist" id="menu-filter" style="position:relative;left:32%;top:0%;height:auto;width:30%; flex-wrap: wrap; display:none; margin-top: 2rem;">
+        <div id="list1" class="dropdown-check-list" >
+            <span class="anchor" style="font-size:20px;">Remover produtos com:</span>
+
+            <ul class="items" style="display:flex;flex-direction:column;font-size: 20px;list-style: none;">
+            </ul>
+        </div>
+    </div>
+
+
+    <!---->
+    <div class="nav-menu2" id="PedidoEfetuado" style="display:none;">
+        <div id="list2"  >
+            <!--Total-->
+            <span class="anchor" id="total" style="font-size:20px;">Total: </span>
+            <ul class="items" id="items1" style="display:flex;flex-direction:column;font-size: 20px;list-style:none;">
+            </ul>
+            <button class="button-64" id="btnFinalise" onclick="finalizarPedido()" role="button" style="position:relative;left:25%;"><span class="text">Finalizar Pedido</span></button>
+            <br><br><br>
+
+        </div>
+    </div>
+
+</div>
+   
+
+    <div class="container" style="position:relative;top:200px; ">
+
+        <div class="products-container">
+
+
+        </div>
+
+    </div>
+
+    <div class="products-preview">
+
+    </div>
+
+
+</body>
+<script>
+    const filter = document.querySelector("#filterButton");
+    const navMenu1 = document.querySelector(".nav-menu1");
+
+    filter.addEventListener("click", filterMenu);
+
+    function filterMenu() {
+      filter.classList.toggle("active");
+      navMenu1.classList.toggle("active");
+    }
+</script>
+
+</html>

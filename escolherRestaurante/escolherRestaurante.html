@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Employee</title>
+
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/css/play.css" />
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <script src="digitalEmployee.js" defer></script>
+    <script src="escolherRestaurante.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img
+          onclick="history.back()"
+          style="height: 100px; cursor: pointer"
+          src="../assets/backButton.png"
+          alt=""
+        />
+        <a href="#" class="nav-logo"
+          ><img
+            src="../assets/DElOGO.PNG"
+            alt=""
+            style="right: 80px; position: relative"
+        /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="../finalizarPedido/finalizarPedido.html" class="nav-link"
+              >Pagar</a
+            >
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container" style=" flex-direction: column;">
+        <h1 style="margin-bottom: 5rem;">Escolha um restaurante da cadeia SustainableFoody:</h1>
+        <div class="restaurantes" style="display: flex; flex-direction: row; justify-content: space-between; flex-wrap:wrap;">
+            <a  style="height:100px;" onclick="saveRestaurant('Lisboa')"><div class="card1" style="border:1px solid">
+                <img  style="height:200px" src="../assets/odivelas.jfif" alt="">
+                <h2 style="margin-left:35%;">Lisboa</h2>
+                <p style="font-size:20px; margin-left:10px;">Rua Paulo Ricardo 12, 21002-03</p>
+            </div></a>
+            <a onclick="saveRestaurant('Almada')"><div class="card1" style="border:1px solid">
+                <img style="height:200px; width:300px" src="../assets/almada.jfif" alt="">
+                <h2 style="margin-left:35%;">Almada</h2>
+                <p style="font-size:20px; margin-left:30px;">Rua João Tomas 3, 1231-132</p>
+            </div></a>
+            <a onclick="saveRestaurant('Amadora')"><div class="card1" style="border:1px solid black">
+                <img  style="height:200px; " src="../assets/amadora.jfif" alt="">
+                <h2 style="margin-left:35%;">Amadora</h2>
+                <p style="font-size:20px;">Rua Carlos Martins 45, 43223-423</p>
+            </div></a>
+
+        </div>
+        
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+
+    //Get all radio's and check which one is checked
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+</script>
+</html>

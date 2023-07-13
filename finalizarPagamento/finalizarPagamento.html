@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finalize o Pagamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="finalizarPagamento.css" />
+    <link rel="stylesheet" href="pagamentoCartão.css" />
+    <link rel="stylesheet" href="../generalStyles.css" />
+
+
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img
+          onclick="history.back()"
+          style="height: 100px; cursor: pointer"
+          src="../assets/backButton.png"
+          alt=""
+        />
+        <a href="#" class="nav-logo"
+          ><img
+            src="../assets/DElOGO.PNG"
+            alt=""
+            style="right: 80px; position: relative"
+        /></a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+   
+    <div class="card1" >
+      
+      <div id="cardMb">
+        <img src="../assets/mbway.png" alt="mbway" style="width: 100%" />
+        <h1>MBWAY</h1>
+        <p class="title"></p>
+        <p style="font-size:15px ;"><br />Introduza o seu número associado ao MBWAY</p>
+        <div class="numbform" style="font-size:20px;" >
+          <label style="font-size:20px;" for="Nr"><br />Número:</label>
+          <input type="text" id="Nr" name="Nr" />
+        </div>
+        <div  id="mbwaybtn" >
+          <button class="btn btn-sm btn-success float-right" id="contbtn1" type="submit">
+          <i class="mdi mdi-gamepad-circle"></i> Continue</button>
+          <button class="btn btn-sm btn-danger" id="restbtn1" type="reset">
+          <i class="mdi mdi-lock-reset"></i> Reset</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+function paymentMethod(method) {
+  if(sessionStorage.getItem("pagamento") == null){
+    sessionStorage.setItem("pagamento", "null");
+  }else{
+  pagamento = "mbway";
+
+  sessionStorage.setItem("pagamento", pagamento);
+  alert("Tem o pedido de pagamento pendente na sua aplicação MBWAY....")
+  
+  window.location.href="pagamentoEfetuado.html"
+}
+}
+
+const continuar = document.getElementById("contbtn1")
+const reset = document.getElementById("restbtn1")
+
+continuar.addEventListener("click",paymentMethod)
+reset.addEventListener("click",()=>{window.location.href="finalizarPagamento.html"})
+  </script>
+</html>

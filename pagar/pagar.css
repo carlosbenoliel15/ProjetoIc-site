@@ -1,0 +1,68 @@
+.pedidos {
+    width: 50%;
+    margin: auto;
+    margin-top:2rem;
+}
+
+.pedidos li{
+    list-style: inherit;
+    margin-top: 4rem;
+}
+
+
+li .pedido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.line {
+    border-bottom: 1px solid black;
+    width: 60%;
+    height: 1px;
+    margin: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#gorjeta {
+    display: none;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+
+}
+
+.card{
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    padding:10px 10px;
+    margin: 20px;
+}
+
+.title{
+    font-size: 15px;
+    margin-top:150px;
+    margin-left: 30%;
+    
+}
+
+.card-title{
+    margin-left: 40px;
+    color:black;
+}
+
+.card-title2{
+    margin-left: 50px;
+    color:black;
+}

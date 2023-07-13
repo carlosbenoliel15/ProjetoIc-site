@@ -1,0 +1,26 @@
+#map {
+    height: 800px;
+    width: 100%;
+}
+
+h2{
+    font-size:70px;
+}
+
+.card1{
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   
+}
+.card1:hover {
+
+    transform: scale(1.03);
+    transition: all 0.2s ease;
+    padding-bottom: 1em;
+    cursor: pointer;
+}

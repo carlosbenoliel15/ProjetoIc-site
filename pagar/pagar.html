@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="../generalStyles.css" />
+    <link rel="stylesheet" href="pagar.css" />
+    
+   
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img onclick="history.back()" style="height: 100px; cursor: pointer;" src="../assets/backButton.png" alt="">
+        <a href="#" class="nav-logo"><img src="../assets/DElOGO.PNG" alt="" style="right: 80px;position: relative;"></a>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+  <div class="title">
+    <h1>Escolha o seu metodo de Pagamento:</h1>
+  </div>
+    <div class="container" >
+      <a href="../finalizarPagamento/pagamentoCartão.html" style="text-decoration:none;"><div class="card" style="width: 250px;">
+        <img src="../assets/credit_card.png" class="card-img-top" style="width:200px;" alt="...">
+        <div class="card-body">
+          <h1 class="card-title">Cartão credito</h1>
+        </div></a>
+      </div>
+      <a href="../finalizarPagamento/finalizarPagamento.html" style="text-decoration:none;"></s><div class="card" style="width: 250px;">
+        <img src="../assets/mbway.png" class="card-img-top" style="width:200px;" alt="...">
+        <div class="card-body">
+          <h1 class="card-title2" >MBWAY</h1>
+        </div></a>
+      </div>
+     
+
+    </div>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    document.getElementById("pagamentoCartao").onclick = function () {
+        window.location.href = "../finalizarPagamento/pagamentoCartão.html";
+    };
+  </script>
+</html>
